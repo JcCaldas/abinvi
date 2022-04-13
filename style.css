@@ -9,6 +9,7 @@ body {
     background-repeat: no-repeat;
     background-color: black;
     background-size: auto;
+    background-position-y: 70px;
 }
 #navegacao img {
     width: 150px;
@@ -20,7 +21,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 90px;
+    height: 80px;
     background-color: black;
     padding-bottom: 50px;
     display: flex;
@@ -34,11 +35,14 @@ body {
 a {
     text-decoration: none;
     color: rgb(255, 255, 255);
+    text-align: center;
+    align-self: center;
+    padding: 0 10px;
 }
 
-div img {
+section img {
     display: block;
-    width: 100%;
+    width:100%;
 }
 
 
@@ -50,16 +54,12 @@ div img {
     
 }
 
-.list-itens {
-    border: 2px solid black;
-    color: #fff;
-}
-
 .cont-esquerda img{
     width: 100%;
     margin: 20px;
     display: flex;
 }
+
 .cont-esquerda{
     margin: 20px;
     width: 250px;
@@ -69,7 +69,7 @@ div img {
 .cont-direita {
     display: flex;
     margin: 20px;
-    width: 500px;
+    width: auto;
     height: 100px;
 }
 
@@ -123,7 +123,7 @@ div img {
     font-size: 15px;
 }
 
-#quem-somos {
+#nossa-historia {
     align-items: center;
     justify-content: space-between;
     padding-top: 200px;
@@ -133,14 +133,14 @@ div img {
     display: flex;
 }
 
-#quem-somos h2 {
+#nossa-historia h2 {
     font-size: 32px;
     color: #489f45;
     margin-bottom: 20px;
     text-align: center;
 }
 
-#quem-somos h3 {
+#nossa-historia h3 {
     font-size: 20px;
     color: rgb(72, 159, 69);
     margin-bottom: 20px;
@@ -148,12 +148,16 @@ div img {
     text-align: center;
 }
 
-#quem-somos p {
+#nossa-historia p {
     width: 100%;
     color: white;
     text-align: justify;
     margin-top: 15px;
-    line-height: 1.5;
+    line-height: 1.7;
+}
+
+#nossa-historia .paragrafo-historia iframe {
+    max-width: 932px;
 }
 
 .historia {
@@ -166,7 +170,7 @@ div img {
     flex-basis: 100%;
     height: 0;
 }
-#quem-somos img {
+#nossa-historia img {
     width: 450px;
     padding: 8px;
     border-radius: 25%;
@@ -177,9 +181,15 @@ div img {
     padding-left: 15px;
     padding-right: 15px;
     text-align: justify;
-    flex: 1;    
+    flex: 1;
+    display: flex;
+    flex-direction: column;    
 }
 
+.mapa {
+    width: 100%;
+    align-self: center;
+}
 
 .container-externo {
     display: flex;
@@ -204,7 +214,8 @@ div img {
     font-size: 32px;
     color: #489f45;
     display: flex;
-    text-align: center;
+    text-align: left;
+    width: 350px;
 }
 
 #senapi p {
@@ -235,19 +246,38 @@ div img {
     width: auto;
 }
 
+#planos {
+    padding-top: 180px;
+}
+
+#planos .flex-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .plano {
     flex-direction: column;
-    padding-top: 180px;
     display: flex;
     align-items: center;
 }
 
+#planos p {
+    color: white;
+    margin-top: 15px;
+    line-height: 1.7;
+    max-width: 992px;
+    text-align: center;
+}
 
-.item-plano h2{
+#planos p span {
+    font-weight: bold;
+}
+
+#planos h2{
     font-size: 32px;
     color: #489f45;
-    display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
     width: 100%;
 }
@@ -260,13 +290,11 @@ div img {
     flex: 1;
     padding-top: 10px;
     padding-bottom: 10px;
-    max-width: 350px;
+    max-width: 992px;
 }
 
 .item-plano .btn {
-    margin: auto;
-    margin-bottom: 20px;
-    /* margin: 0 10px 0 10px; */
+    margin: 20px 0;
 }
 
 .item-plano h3 {
@@ -274,7 +302,7 @@ div img {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     color: #489f45;
 }
 
@@ -292,27 +320,93 @@ div img {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-    list-style: none;
 }
 
 .item-plano ul {
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
-    color: #489f45;
+    align-items: left;
+    color: white;
     
 }
 
 .item-plano li {
-    text-align: center;
-    font-size: 20px;
+    text-align: justify;
+    line-height: 1.7;
 }
 
-.item-plano li::before {
+/* .item-plano li::before {
     content: "";
     width: 10px;
     height: 10px;
     margin-right: 5px;
+} */
+
+#certificacoes {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 150px;
+}
+#certificacoes h2 {
+    font-size: 40px;
+    color: #489f45;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+ #certificacoes .membros {
+     display: flex;
+     align-items: center;
+ }
+
+ #certificacoes .certificacao {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     align-items: center;
+     padding-top: 20px;
+     margin-top: 50px;
+     border-top: #489f45 solid;
+ }
+
+#certificacoes img {
+    padding: 0 10px;
+    width: 100%;
+}
+
+
+#faleconosco {
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    margin-top: 180px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#faleconosco h2 {
+    font-size: 32px;
+    color: #489f45;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#faleconosco img {
+    width: 100%;
+}
+#faleconosco .btn {
+    padding: 0;
+    margin: 0;
+}
+
+/* AJUSTAR ICONES REDES SOCIAIS */
+.icones-fale {
+    /* display: flex; */
+    /* align-items: flex-end; */
+    /* border: #122A57 solid; */
+    /* width: 25%; */
+    align-self: center;
 }
 
 footer {
@@ -350,7 +444,7 @@ footer .footer {
         background-color: rgb(0, 0, 0);
         width: 100%;
         align-content: flex-start;
-        height: 50px;
+        height: 115px;
      }
 
      #menu img {
@@ -365,8 +459,8 @@ footer .footer {
     }
 
     .cont-direita {
-        flex-direction: row;
-        width: 380px;
+        flex-direction: column;
+        width: 100%;
         margin-top: 0;
         margin-left: 5px;
     }
@@ -375,6 +469,7 @@ footer .footer {
         text-align: center;
         padding: 0;
         border: 0;
+        font-size: 80%;
     }
 
     .btn {
@@ -397,7 +492,7 @@ footer .footer {
         height: 500px;
         width: 100%;
         display: flex;
-        align-content: center;
+        /* align-items: center; */
     }
 
     .flex-container {
@@ -408,6 +503,12 @@ footer .footer {
         
     }
 
+    #inicio img {
+        width: 105%;
+        padding-right: 0px;
+        margin-left: 0px;
+    }
+
     .apresentacao {
         height: 100%;
         align-items: center;
@@ -415,40 +516,20 @@ footer .footer {
         padding-bottom: 100px;
     }
     
-    .img-logo {
-        display: flex;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        margin: 5px;
-    
-    }
-
-    .container-externo {
+    /* .container-externo {
         display: flex;
         max-width: 992px;
         margin: auto;
         width: 100%;
         min-width: 320px;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         align-items: center;
-        align-content: stretch;
         flex-direction: column;
-    }
-
-    #senapi {
-        align-items: center;
-        justify-content: space-between;
-        flex: 1;
-        align-items: center;
-        display: flex;
     }
     
     #senapi h2{
         font-size: 32px;
         color: #489f45;
-        display: flex;
-        text-align: center;
     }
     
     #senapi p {
@@ -456,12 +537,13 @@ footer .footer {
         margin-bottom: 40px;
         font-size: 20px;
         color: white;
-        text-align:start;
+        text-align:left;
     }
     
     .logo-senap {
-        width: 370px;
+        width: 90%;
         margin-bottom: 15px;
+        align-self: center;
     
     }
     
@@ -469,38 +551,36 @@ footer .footer {
         padding-left: 0px;
         margin-left: 5px;
         margin-right: 5px;
-        text-align: left;
         color:  rgb(72, 159, 69);
-    }
+        display: flex;
+    } */
 
 
-    #quem-somos {
+    #nossa-historia {
         align-items: center;
         justify-content: space-between;
-        padding-top: 200px;
+        margin-top: 350px;
         padding-bottom: 130px;
         flex: 1;
         align-items: center;
         display: flex;
     }
 
-    #quem-somos .flex-container .historia {
+    #nossa-historia .flex-container .historia {
         display: flex;
         max-width: 992px;
         margin: 0;
-        width: 100%;
-        border: 2px white solid;
-        
+        width: 100%;        
     }
     
-    #quem-somos h2 {
+    #nossa-historia h2 {
         font-size: 32px;
         color: #489f45;
         margin-bottom: 20px;
         text-align: center;
     }
     
-    #quem-somos h3 {
+    #nossa-historia h3 {
         font-size: 20px;
         color: rgb(72, 159, 69);
         margin-bottom: 20px;
@@ -508,7 +588,7 @@ footer .footer {
         text-align: center;
     }
     
-    #quem-somos p {
+    #nossa-historia p {
         width: 100%;
         color: white;
         text-align: justify;
@@ -525,13 +605,13 @@ footer .footer {
         flex-basis: 100%;
         height: 0;
     }
-    #quem-somos img {
+    #nossa-historia img {
         width: 95%;
         padding: 8px;
         border-radius: 25%;
     }
     
-    #quem-somos .flex-container .paragrafo-historia .historia {
+    #nossa-historia .flex-container .paragrafo-historia .historia {
         max-width: 100%;
     }
     .paragrafo-historia {
@@ -542,17 +622,31 @@ footer .footer {
         flex-direction: column;
     }
 
+    #planos {
+        display: flex;
+    }
+
+    #planos p, span {
+        color: white;
+        margin-top: 15px;
+        line-height: 1.7;
+        margin-left: 10px;
+        margin-right: 15px;
+        max-width: 990px;
+        text-align: center;
+    }
+
     .plano {
         flex-direction: column;
         width: 100%;
-        padding-top: 90px;
-        padding-bottom: 140px;
+        padding-top: 10px;
+        padding-bottom: 50px;
         display: flex;
         align-items: center;
     }
     
     
-    .item-plano h2{
+    #plano h2{
         font-size: 32px;
         color: #489f45;
         display: flex;
@@ -568,21 +662,23 @@ footer .footer {
     }
      
     .item-plano {
-        margin-right: 0px;
         padding-top: 0;
         display: flex;
         flex-direction: column;
+        max-width: 992px;
         
     }
 
-    #planos .flex-container {
+    #planos .plano .flex-container {
         display: flex;
-        align-self: center;
+        text-align: justify;
+        max-width: 990px;
     }
 
     .item-plano .btn {
         margin: auto;
         margin-bottom: 20px;
+        width: 90%;
     }
     
     .item-plano h3::after {
@@ -598,16 +694,52 @@ footer .footer {
         display: flex;
         color: #489f45;
         padding: 10px 20px;
-        flex-direction: row;
+        flex-direction: column;
         margin-bottom: 10px;
-        list-style: none;
         align-self: center;
         
     }
     
     .item-plano li {
+        text-align: justify;
+        max-width: 990px;
+        color: #fff;
+    }
+
+    #certificacoes {
+        padding-top: 300px;
+        padding-bottom: 200px;
+    }
+
+    #faleconosco {
+        /* align-items: center; */
+        /* justify-content: space-between; */
+        padding-top: 100px;
+        padding-bottom: 200px;
+        /* align-items: center; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        /* flex-direction: column; */
+    }
+    
+    #faleconosco h2 {
+        font-size: 32px;
+        color: #489f45;
+        margin-bottom: 10px;
         text-align: center;
-        font-size: 20px;
+        width: 100%;
+    }
+    
+    #faleconosco img {
+        width: 105%;
+        padding-right: 0px;
+        margin-left: 0px;
+    }
+
+    .icones-fale {
+        padding-top: 10px;
+        /* width: 65%; */
+        align-items: center;
     }
 
     footer {
@@ -615,6 +747,7 @@ footer .footer {
         height: 70px;
         display: flex;
         align-items: center;
+        width: 105%;
     }
     
     footer .footer {
